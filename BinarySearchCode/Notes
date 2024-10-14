@@ -1,0 +1,15 @@
+Agnostic Binary Search
+Definition: A binary search that works on sorted arrays, regardless of whether they are sorted in
+ascending or descending order.
+
+Steps
+1:- Identify Order:
+    Check if the first element is less than the last element:
+        Ascending Order: arr[0] < arr[n-1]
+        Descending Order: arr[0] > arr[n-1]
+
+2:- Binary Search:
+    Use a standard binary search loop:
+        Calculate the middle index.
+        Check if the middle element is the target.
+        Adjust the search range based on the identified order.
