@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args){
-        int[] nums = {5,4,3,6,8,7, 10, 2,1};
-        quickSort(nums, 0, nums.length-1);
-        System.out.println(Arrays.toString(nums));
+        int[] arr = {5,4,3,6,8,7, 10, 2,1};
+        quickSort(arr, 0, arr.length-1);
+        System.out.println(Arrays.toString(arr));
     }
 
     // Quick Sort
-    static void quickSort(int[] nums, int low, int high){
+    static void quickSort(int[] arr, int low, int high){
         if(low > high){
             return;
         }
@@ -19,25 +19,25 @@ public class QuickSort {
         int mid = start + (end - start) / 2;
 
         // get the pivot element
-        int pivot = nums[mid];
+        int pivot = arr[mid];
 
         while(start <= end){
-            while(nums[start] < pivot){
+            while(arr[start] < pivot){
                 start++;
             }
-            while(nums[end] > pivot){
+            while(arr[end] > pivot){
                 end--;
             }
             if(start <= end){
                 // swap
-                int temp = nums[start];
-                nums[start] = nums[end];
-                nums[end] = temp;
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
                 //index should move -> start inc by 1 and end dec by 1
                 start++; end--;
             }
         }
-        quickSort(nums, low, end);
-        quickSort(nums, start, high);
+        quickSort(arr, low, end);
+        quickSort(arr, start, high);
     }
 }
