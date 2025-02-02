@@ -21,6 +21,45 @@ public class MergeSort {
         return merge(left, right);
     }
 
+    public static int[] mergeSort2(int[] arr){
+        if(arr.length == 1){
+            return arr;
+        }
+        int mid = arr.length /2;
+
+        int[] left = mergeSort2(Arrays.copyOfRange(arr, 0, mid));
+        int[] right = mergeSort2(Arrays.copyOfRange(arr, mid, arr.length));
+
+        return merge2(left, right);
+    }
+
+    public static int[] merge2(int[] first, int[] second){
+        int[] mix = new int [first.length + second.length];
+        int i=0, j=0, k=0;
+
+        while (i< first.length && j< second.length){
+            if(first[i] < second[j]){
+                mix[k++] = first[i++];
+            }
+            else{
+                mix[k++] = second[j++];
+            }
+        }
+
+        // if first array is pending / not empty
+        while (i < first.length){
+            mix[k++] = first[i++];
+        }
+
+        // if the second array is pending/ not empty
+        while (j< second.length){
+            mix[k++] = second[j++];
+        }
+
+        return mix;
+    }
+
+
     private static int[] merge(int[] first, int[] second){
         int[] mix = new int[first.length + second.length];
         int i = 0,j = 0 ,k = 0;
