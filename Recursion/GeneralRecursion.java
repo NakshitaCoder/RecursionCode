@@ -1,6 +1,6 @@
 package Recursion;
 
-public class Question1 {
+public class GeneralRecursion {
     public static void main(String[] args) {
         int N = 10;
         func(N);
