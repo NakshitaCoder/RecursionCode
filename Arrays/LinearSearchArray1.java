@@ -2,7 +2,7 @@ package Arrays;
 // 1. Linear search
 //Note: Single index
 
-public class LinearSearchArray {
+public class LinearSearchArray1 {
     public static void main(String[] args){
         int[] arr = {3,2,1,18,9};
         int target = 18;

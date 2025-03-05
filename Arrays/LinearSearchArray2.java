@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 // 2. Linear search, create new static arrayList for returning the list
 //  Note: multiple index
-public class LinearSearchArrayList {
+public class LinearSearchArray2 {
     public static void main(String[] args){
         int[] arr = {10,20,30,40,40,50};
         int target = 40;
